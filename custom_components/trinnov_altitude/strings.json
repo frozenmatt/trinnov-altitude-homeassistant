@@ -58,6 +58,9 @@
       "source": {
         "name": "Source"
       },
+      "source_index": {
+        "name": "Source Index"
+      },
       "preset": {
         "name": "Preset"
       },
