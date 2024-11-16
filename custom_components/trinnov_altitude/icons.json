@@ -33,9 +33,6 @@
       "source": {
         "default": "mdi:video-input-hdmi"
       },
-      "source_index": {
-        "default": "mdi:video-input-hdmi"
-      },
       "source_format": {
         "default": "mdi:dolby"
       },

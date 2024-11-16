@@ -49,11 +49,11 @@ SENSORS: tuple[TrinnovAltitudeSensorEntityDescription, ...] = (
         translation_key="source",
         value_fn=lambda device: device.source,
     ),
-    TrinnovAltitudeSensorEntityDescription(
-        key="source_index",
-        translation_key="source_index",
-        value_fn=lambda device: device.source_index,
-    ),
+    # TrinnovAltitudeSensorEntityDescription(
+    #     key="source_index",
+    #     translation_key="source_index",
+    #     value_fn=lambda device: device.source_index,
+    # ),
     TrinnovAltitudeSensorEntityDescription(
         key="source_format",
         translation_key="source_format",
