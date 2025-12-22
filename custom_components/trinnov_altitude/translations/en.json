@@ -57,9 +57,6 @@
       "source": {
         "name": "Source"
       },
-      "source_format": {
-        "name": "Source Format"
-      },
       "preset": {
         "name": "Preset"
       },
@@ -68,17 +65,6 @@
       },
       "volume": {
         "name": "Volume"
-      }
-    },
-    "switch": {
-      "bypass": {
-        "name": "Bypass"
-      },
-      "dim": {
-        "name": "Dim"
-      },
-      "mute": {
-        "name": "Mute"
       }
     }
   }
