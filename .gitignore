@@ -10,6 +10,7 @@ __pycache__/
 
 # Jetbrains project files
 *.idea
+.idea/
 
 # Distribution / packaging
 .Python
