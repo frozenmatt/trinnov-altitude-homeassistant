@@ -8,9 +8,25 @@ __pycache__/
 # C extensions
 *.so
 
-# Jetbrains project files
-*.idea
+# JetBrains IDEs (PyCharm, IntelliJ, WebStorm, etc.)
 .idea/
+*.iml
+*.ipr
+*.iws
+out/
+.idea_modules/
+
+# JetBrains caches and local state
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/contentModel.xml
+
+# Gradle / Maven auto-generated (JetBrains-related)
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Distribution / packaging
 .Python
