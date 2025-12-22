@@ -12,19 +12,7 @@
     "step": {
       "user": {
         "title": "Setup Trinnov Altitude",
-        "description": "Your device needs to be on in order to add the integation. ",
-        "data": {
-          "host": "[%key:common::config_flow::data::host%]",
-          "mac": "MAC address"
-        },
-        "data_description": {
-          "host": "The hostname or IP address of your Trinnov Altitude device. Be sure to configure your IP address to be static.",
-          "mac": "The MAC address of your Trinnov Altitude device. Used for Wake-On-Lan (WAL)."
-        }
-      },
-      "reconfigure": {
-        "title": "Reconfigure Trinnov Altitude",
-        "description": "Your device needs to be on in order to reconfigure the integation. ",
+        "description": "Your device needs to be on in order to add the integration.",
         "data": {
           "host": "[%key:common::config_flow::data::host%]",
           "mac": "MAC address"
@@ -37,18 +25,48 @@
     }
   },
   "entity": {
-    "binary_sensor": {
-      "bypass": {
-        "name": "Bypass"
+    "button": {
+      "acoustic_correction_toggle": {
+        "name": "Toggle Acoustic Correction"
       },
-      "dim": {
-        "name": "Dim"
+      "front_display_toggle": {
+        "name": "Toggle Front Display"
       },
-      "mute": {
-        "name": "Mute"
+      "level_alignment_toggle": {
+        "name": "Toggle Level Alignment"
+      },
+      "quick_optimized_toggle": {
+        "name": "Toggle Quick Optimized"
+      },
+      "time_alignment_toggle": {
+        "name": "Toggle Time Alignment"
+      }
+    },
+    "number": {
+      "volume": {
+        "name": "Volume"
+      }
+    },
+    "select": {
+      "preset": {
+        "name": "Preset"
+      },
+      "source": {
+        "name": "Source"
+      },
+      "upmixer": {
+        "name": "Upmixer"
       }
     },
     "sensor": {
+      "power_status": {
+        "name": "Power Status",
+        "state": {
+          "off": "Off",
+          "booting": "Booting",
+          "ready": "Ready"
+        }
+      },
       "audiosync": {
         "name": "Audiosync"
       },
@@ -58,6 +76,9 @@
       "source": {
         "name": "Source"
       },
+      "source_format": {
+        "name": "Source Format"
+      },
       "preset": {
         "name": "Preset"
       },
@@ -66,6 +87,17 @@
       },
       "volume": {
         "name": "Volume"
+      }
+    },
+    "switch": {
+      "bypass": {
+        "name": "Bypass"
+      },
+      "dim": {
+        "name": "Dim"
+      },
+      "mute": {
+        "name": "Mute"
       }
     }
   }

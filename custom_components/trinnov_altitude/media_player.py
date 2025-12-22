@@ -5,21 +5,17 @@ from __future__ import annotations
 import logging
 from typing import TYPE_CHECKING
 
-
 from homeassistant.components.media_player import (
     MediaPlayerDeviceClass,
     MediaPlayerEntity,
     MediaPlayerEntityFeature,
     MediaPlayerState,
 )
-from homeassistant.util.dt import utcnow
 
 from .const import DOMAIN
 from .entity import TrinnovAltitudeEntity
 
 if TYPE_CHECKING:
-    from datetime import datetime
-
     from homeassistant.config_entries import ConfigEntry
     from homeassistant.core import HomeAssistant
     from homeassistant.helpers.entity_platform import AddEntitiesCallback
@@ -102,11 +98,11 @@ class TrinnovAltitudeMediaPlayer(TrinnovAltitudeEntity, MediaPlayerEntity):
     @property
     def state(self) -> MediaPlayerState:  # type: ignore
         """State of device."""
+        if not self._device.connected() or not self._device._initial_sync.is_set():
+            return MediaPlayerState.OFF
         if self._device.source_format:
             return MediaPlayerState.PLAYING
-        if self._device.connected():
-            return MediaPlayerState.IDLE
-        return MediaPlayerState.OFF
+        return MediaPlayerState.IDLE
 
     @property
     def volume_level(self) -> float | None:  # type: ignore
